@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1280">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Слайдер</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <section class="product-item">
+    <div class="product-gallery">
+      <img src="image/airmax.png" alt="" id="slider0">
+      <img src="image/airmax-jump.png" alt="" id="slider1">
+      <img src="image/airmax-on-foot.png" alt="" id="slider2">
+      <img src="image/airmax-playground.png" alt="" id="slider3">
+      <img src="image/airmax-top-view.png" alt="" id="slider4">
+    </div>
+    <div class="product-data">
+      <p class="product-firm">Nike</p>
+      <h2 class="product-name">AIR MAX TAVAS SD</h2>
+      <p class="product-price">160.00</p>
+      <p class="product-colors">Black/Pink Pow/Tour Yellow/White</p>
+      <p class="product-size">38-42</p>
+      <button class="buy-btn">add to cart</button>
+
+      <div class="product-info">
+        <p class="product-description">
+          The Nike Air Max Tavas SD Men's Shoe recalls the profile of the iconic running original with a Max Air unit in the heel and multi-surface Waffle outsole. A lightweight upper and gradient detail offer a comfortable fit and dynamic look.
+        </p>
+        <p class="product-description">
+          Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s. In 1987, the Nike Air Max 1 debuted with visible air in its heel, allowing fans more than just the feel of Air-Sole comfort
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById('slider0').style.display = 'block';
+    document.getElementById('slider1').style.display = 'none';
+    document.getElementById('slider2').style.display = 'none';
+    document.getElementById('slider3').style.display = 'none';
+    document.getElementById('slider4').style.display = 'none';  
+    let step = 0;
+
+
+     slider();
+     function slider() {
+     
+      for (const sliderId of ['slider0','slider1','slider2','slider3','slider4']) { 
+        
+        var slide = document.getElementById(sliderId);      
+      }
+      console.log(document.getElementById(slide.id).style.display);
+      <!-- if (document.getElementById(slide.id).style.display === 'none') {         -->
+      
+      if (document.getElementById(slide.id).style.display === 'none') {
+        
+        <!-- console.log(slide, 'slide.id'); -->
+        
+        console.log(slide.id, 'slide.id');
+        console.log(slide.id[6], 'slide.id[6]');
+        console.log(step, 'step');
+        console.log('первый блок');
+        
+        document.getElementById('slider0').style.display = 'none';
+        document.getElementById('slider1').style.display = 'none';
+        document.getElementById('slider2').style.display = 'none';
+        document.getElementById('slider3').style.display = 'none';
+        document.getElementById('slider4').style.display = 'none';
+        document.getElementById(slide.id).style.display = 'block';
+        
+        step++;
+        if (step > 4) {
+          step = 0;
+        }
+        
+      }
+        <!-- slide.id[6] = step; -->
+        
+    }
+    setInterval(slider, 3000);      
+    
+  </script>  
+</body>
+</html>
