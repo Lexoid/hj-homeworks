@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Материалы для домашних работ курса «JavaScript в браузере»
 
 ## Список заданий
@@ -43,3 +44,8 @@
 [2]: https://bitbucket.org/
 [3]: https://atom.io
 [4]: https://git-scm.com/
+=======
+# hj-homeworks
+hj-14_homeWork
+https://github.com/netology-code/hj-homeworks/blob/master/README.md
+>>>>>>> origin/master
